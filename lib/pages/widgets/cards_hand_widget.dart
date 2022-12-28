@@ -12,11 +12,9 @@ class CardsHandWidget extends StatefulWidget {
 }
 
 class _CardsHandWidgetState extends State<CardsHandWidget> {
-  late PageController _pageController;
 
   @override
   void initState() {
-    _pageController = PageController(viewportFraction: 0.4, initialPage: 2);
     super.initState();
   }
 
