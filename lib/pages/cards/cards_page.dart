@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_plus_freezed/pages/widgets/cards_hand_widget.dart';
+import 'package:flutter_bloc_plus_freezed/pages/cards/cards_hand_widget.dart';
 import 'package:flutter_bloc_plus_freezed/utils/resources.dart';
 
 class CardsPage extends StatefulWidget {
@@ -12,27 +12,8 @@ class CardsPage extends StatefulWidget {
 }
 
 class _CardsPageState extends State<CardsPage> with TickerProviderStateMixin {
-  late AnimationController _controller;
-
   @override
   void initState() {
-    _controller = AnimationController(vsync: this);
-    _controller.addStatusListener((status) {
-      switch (status) {
-        case AnimationStatus.dismissed:
-          break;
-        case AnimationStatus.forward:
-          break;
-        case AnimationStatus.reverse:
-          break;
-        case AnimationStatus.completed:
-          Duration animationDuration = _controller.duration!;
-          _controller.duration = const Duration(seconds: 0);
-          _controller.reverse();
-          _controller.duration = animationDuration;
-          break;
-      }
-    });
     super.initState();
   }
 
@@ -40,7 +21,8 @@ class _CardsPageState extends State<CardsPage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text(Resources.textToolbarTitle)),
+        centerTitle: true,
+        title: const Text(Resources.textToolbarTitle),
       ),
       body: CardsHandWidget(
         cards: List.of(

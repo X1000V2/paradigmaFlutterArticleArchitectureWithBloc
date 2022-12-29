@@ -13,9 +13,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text(Resources.textToolbarTitle),
-        ),
+        centerTitle: true,
+        title: const Text(Resources.textToolbarTitle),
       ),
       body: Center(
         child: Column(
