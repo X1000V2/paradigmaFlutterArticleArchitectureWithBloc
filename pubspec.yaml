@@ -40,6 +40,8 @@ dependencies:
   flutter_svg: ^1.1.6
   injector: ^2.0.0
   go_router: ^6.0.0
+  http: ^0.13.5
+  localstorage: ^4.0.0+1
 
 dev_dependencies:
   flutter_test:
