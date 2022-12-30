@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_plus_freezed/data/repositories/cards_repository.dart';
-import 'package:flutter_bloc_plus_freezed/data/repositories/deck_local_storage_repository.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_plus_freezed/di/dependency_injection.dart';
+import 'package:flutter_bloc_plus_freezed/domain/blocs/cards/cards_bloc.dart';
 import 'package:flutter_bloc_plus_freezed/domain/entities/card_entity.dart';
 import 'package:flutter_bloc_plus_freezed/domain/useCase/get_cards_hand_use_case.dart';
 import 'package:flutter_bloc_plus_freezed/pages/cards/cards_hand_widget.dart';
@@ -21,19 +21,7 @@ class _CardsPageState extends State<CardsPage> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    callServiceCards();
     super.initState();
-  }
-
-  void callServiceCards() async {
-    GetCardsHandUseCase getCardsHandUseCase = GetCardsHandUseCase(
-      cardsRepository: appInjector.get<CardsRepository>(),
-      deckLocalStorageRepository: appInjector.get<DeckLocalStorageRepository>(),
-    );
-    var newCards = await getCardsHandUseCase.getCards();
-    setState(() {
-      cards = newCards;
-    });
   }
 
   @override
@@ -43,9 +31,52 @@ class _CardsPageState extends State<CardsPage> with TickerProviderStateMixin {
         centerTitle: true,
         title: const Text(Resources.textToolbarTitle),
       ),
-      body: CardsHandWidget(
-        cards: cards,
+      body: BlocProvider(
+        create: (context) {
+          return CardsBloc(getCardsHandUseCase: appInjector.get<GetCardsHandUseCase>());
+        },
+        child: BlocBuilder<CardsBloc, CardsState>(
+          builder: (context, state) {
+            switch (state.runtimeType) {
+              case LoadingCardsState:
+                {
+                  context.read<CardsBloc>().add(LoadingCardsEvent());
+                  return const Center(child: CircularProgressIndicator());
+                }
+              case GetCardsOKState:
+                {
+                  return Stack(
+                    children: [
+                      RefreshIndicator(
+                        onRefresh: () async {
+                          context.read<CardsBloc>().emit(LoadingCardsState());
+                        },
+                        child: ListView(children: [
+                          CardsHandWidget(
+                            height: 600,
+                            cards: (state as GetCardsOKState).handCards.cardList,
+                          ),
+                        ]),
+                      ),
+                      Positioned(
+                        bottom: 0,
+                        right: 0,
+                        child: Text("Cartas restantes: ${(state as GetCardsOKState).handCards.remainingCardsInDeck}"),
+                      )
+                    ],
+                  );
+                }
+              default:
+                {
+                  return const SizedBox();
+                }
+            }
+          },
+        ),
       ),
+      // CardsHandWidget(
+      //   cards: cards,
+      // ),
     );
   }
 }

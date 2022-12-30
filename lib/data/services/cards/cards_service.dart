@@ -6,7 +6,7 @@ import 'package:flutter_bloc_plus_freezed/utils/app_logger.dart';
 import 'package:http/http.dart' as http;
 
 class CardsService {
-  Future<String> generateDeck() async {
+  Future<GenerateDeckResponse?> generateDeck() async {
     String serviceUrl = "${EndPoints.deckServiceUrl}new/shuffle/?deck_count=1";
     Uri url = Uri.parse(serviceUrl);
     var response = await http.get(url);
@@ -14,9 +14,9 @@ class CardsService {
     if (response.statusCode == 200) {
       AppLogger.printServiceCall(response);
       var generateDeckResponse = GenerateDeckResponse.fromJson(response.body);
-      return generateDeckResponse.deckId;
+      return generateDeckResponse;
     } else {
-      return "";
+      return null;
     }
   }
 

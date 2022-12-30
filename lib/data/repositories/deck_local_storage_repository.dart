@@ -6,10 +6,12 @@ class DeckLocalStorageRepository{
 
   DeckEntity getLocalDeck(){
     String localDeckId = storage.getItem("local_deck_id")??"";
-    return DeckEntity(deckId: localDeckId);
+    int localDeckRemainingCards = storage.getItem("local_deck_remaining")??0;
+    return DeckEntity(deckId: localDeckId, remainingCards: localDeckRemainingCards);
   }
 
   void setLocalDeck(DeckEntity deck){
     storage.setItem("local_deck_id", deck.deckId);
+    storage.setItem("local_deck_remaining", deck.remainingCards);
   }
 }
