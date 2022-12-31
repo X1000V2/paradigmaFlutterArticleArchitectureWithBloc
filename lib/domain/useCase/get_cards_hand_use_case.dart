@@ -1,12 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc_plus_freezed/data/repositories/cards_repository.dart';
 import 'package:flutter_bloc_plus_freezed/data/repositories/deck_local_storage_repository.dart';
-import 'package:flutter_bloc_plus_freezed/domain/entities/card_entity.dart';
 import 'package:flutter_bloc_plus_freezed/domain/entities/deck_entity.dart';
 import 'package:flutter_bloc_plus_freezed/domain/entities/hand_entity.dart';
+import 'package:flutter_bloc_plus_freezed/domain/repositoryInterfaces/cards_repository_interface.dart';
 
 class GetCardsHandUseCase {
-  CardsRepository cardsRepository;
+  CardsRepositoryInterface cardsRepository;
   DeckLocalStorageRepository deckLocalStorageRepository;
 
   GetCardsHandUseCase({required this.cardsRepository, required this.deckLocalStorageRepository});

@@ -4,7 +4,7 @@ import 'package:flutter_bloc_plus_freezed/data/services/model/get_cards_response
 import 'package:flutter_bloc_plus_freezed/domain/entities/card_entity.dart';
 import 'package:flutter_bloc_plus_freezed/domain/entities/deck_entity.dart';
 import 'package:flutter_bloc_plus_freezed/domain/entities/hand_entity.dart';
-import 'package:flutter_bloc_plus_freezed/domain/repositories/cards_repository_interface.dart';
+import 'package:flutter_bloc_plus_freezed/domain/repositoryInterfaces/cards_repository_interface.dart';
 
 class CardsRepository implements CardsRepositoryInterface {
   CardsService cardsService;

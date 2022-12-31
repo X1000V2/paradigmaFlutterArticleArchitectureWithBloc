@@ -1,6 +1,4 @@
-import 'dart:convert' as convert;
-class CardResponse{
-
+class CardResponse {
   String name;
   String urlImage;
 

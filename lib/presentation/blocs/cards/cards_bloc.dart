@@ -1,5 +1,4 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_plus_freezed/domain/entities/card_entity.dart';
 import 'package:flutter_bloc_plus_freezed/domain/entities/hand_entity.dart';
 import 'package:flutter_bloc_plus_freezed/domain/useCase/get_cards_hand_use_case.dart';
 

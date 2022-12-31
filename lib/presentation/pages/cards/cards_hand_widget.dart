@@ -4,11 +4,11 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc_plus_freezed/domain/entities/card_entity.dart';
 
 class CardsHandWidget extends StatefulWidget {
-  CardsHandWidget({Key? key, required this.cards, required this.height}) : super(key: key);
+  const CardsHandWidget({Key? key, required this.cards, required this.height}) : super(key: key);
 
   final List<CardEntity> cards;
   final int _degreesBetweenCards = 12;
-  double height;
+  final double height;
 
   @override
   State<CardsHandWidget> createState() => _CardsHandWidgetState();

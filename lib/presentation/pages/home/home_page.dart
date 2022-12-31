@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_bloc_plus_freezed/pages/cards/cards_page.dart';
+import 'package:flutter_bloc_plus_freezed/presentation/pages/cards/cards_page.dart';
 import 'package:flutter_bloc_plus_freezed/utils/resources.dart';
 import 'package:go_router/go_router.dart';
 
