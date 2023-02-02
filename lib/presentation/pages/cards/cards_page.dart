@@ -47,6 +47,10 @@ class _CardsPageState extends State<CardsPage> with TickerProviderStateMixin {
                 {
                   return Stack(
                     children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [Text("Swipe refresh para obtener más cartas")],
+                      ),
                       RefreshIndicator(
                         onRefresh: () async {
                           context.read<CardsBloc>().emit(LoadingCardsState());
