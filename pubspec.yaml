@@ -1,5 +1,5 @@
-name: flutter_bloc_plus_freezed
-description: Flutter Bloc plus Freezed. Paradigma article.
+name: flutter_bloc_architecture
+description: Flutter Bloc. Paradigma article.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.

@@ -1,6 +1,6 @@
 import 'dart:convert' as convert;
 
-import 'package:flutter_bloc_plus_freezed/data/services/model/cards_response.dart';
+import 'package:flutter_bloc_architecture/data/services/model/cards_response.dart';
 
 class GetCardsResponse {
   bool success;

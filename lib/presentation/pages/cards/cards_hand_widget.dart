@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter_bloc_plus_freezed/domain/entities/card_entity.dart';
+import 'package:flutter_bloc_architecture/domain/entities/card_entity.dart';
 
 class CardsHandWidget extends StatefulWidget {
   const CardsHandWidget({Key? key, required this.cards, required this.height}) : super(key: key);

@@ -1,6 +1,6 @@
-# flutter_bloc_plus_freezed
+# flutter_bloc_architecture
 
-Flutter Bloc plus Freezed. Paradigma article.
+Flutter Bloc. Paradigma article.
 
 ## Getting Started
 

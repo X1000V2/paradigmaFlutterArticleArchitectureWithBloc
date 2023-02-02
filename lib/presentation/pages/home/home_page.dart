@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_plus_freezed/presentation/pages/cards/cards_page.dart';
-import 'package:flutter_bloc_plus_freezed/utils/resources.dart';
+import 'package:flutter_bloc_architecture/presentation/pages/cards/cards_page.dart';
+import 'package:flutter_bloc_architecture/utils/resources.dart';
 import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {

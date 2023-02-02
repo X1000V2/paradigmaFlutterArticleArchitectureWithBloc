@@ -1,8 +1,8 @@
-import 'package:flutter_bloc_plus_freezed/data/services/model/generate_deck_response.dart';
-import 'package:flutter_bloc_plus_freezed/data/services/model/get_cards_response.dart';
-import 'package:flutter_bloc_plus_freezed/domain/entities/deck_entity.dart';
-import 'package:flutter_bloc_plus_freezed/utils/endpoints.dart';
-import 'package:flutter_bloc_plus_freezed/utils/app_logger.dart';
+import 'package:flutter_bloc_architecture/data/services/model/generate_deck_response.dart';
+import 'package:flutter_bloc_architecture/data/services/model/get_cards_response.dart';
+import 'package:flutter_bloc_architecture/domain/entities/deck_entity.dart';
+import 'package:flutter_bloc_architecture/utils/endpoints.dart';
+import 'package:flutter_bloc_architecture/utils/app_logger.dart';
 import 'package:http/http.dart' as http;
 
 class CardsService {

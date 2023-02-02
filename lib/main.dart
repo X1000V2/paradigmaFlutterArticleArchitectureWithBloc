@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_plus_freezed/di/dependency_injection.dart';
-import 'package:flutter_bloc_plus_freezed/presentation/router/app_router.dart';
+import 'package:flutter_bloc_architecture/di/dependency_injection.dart';
+import 'package:flutter_bloc_architecture/presentation/router/app_router.dart';
 
 void main() {
   initInjection();

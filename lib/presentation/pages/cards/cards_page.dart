@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_plus_freezed/di/dependency_injection.dart';
-import 'package:flutter_bloc_plus_freezed/domain/entities/card_entity.dart';
-import 'package:flutter_bloc_plus_freezed/domain/useCase/impl/get_cards_hand_use_case.dart';
-import 'package:flutter_bloc_plus_freezed/presentation/blocs/cards/cards_bloc.dart';
-import 'package:flutter_bloc_plus_freezed/presentation/pages/cards/cards_hand_widget.dart';
-import 'package:flutter_bloc_plus_freezed/utils/resources.dart';
+import 'package:flutter_bloc_architecture/di/dependency_injection.dart';
+import 'package:flutter_bloc_architecture/domain/entities/card_entity.dart';
+import 'package:flutter_bloc_architecture/domain/useCase/impl/get_cards_hand_use_case.dart';
+import 'package:flutter_bloc_architecture/presentation/blocs/cards/cards_bloc.dart';
+import 'package:flutter_bloc_architecture/presentation/pages/cards/cards_hand_widget.dart';
+import 'package:flutter_bloc_architecture/utils/resources.dart';
 
 class CardsPage extends StatefulWidget {
   static const route = "cards";

@@ -1,8 +1,8 @@
-import 'package:flutter_bloc_plus_freezed/data/repository/cards_repository_interface.dart';
-import 'package:flutter_bloc_plus_freezed/data/repository/impl/deck_local_storage_repository.dart';
-import 'package:flutter_bloc_plus_freezed/domain/entities/deck_entity.dart';
-import 'package:flutter_bloc_plus_freezed/domain/entities/hand_entity.dart';
-import 'package:flutter_bloc_plus_freezed/domain/useCase/get_cards_hand_use_case_interface.dart';
+import 'package:flutter_bloc_architecture/data/repository/cards_repository_interface.dart';
+import 'package:flutter_bloc_architecture/data/repository/impl/deck_local_storage_repository.dart';
+import 'package:flutter_bloc_architecture/domain/entities/deck_entity.dart';
+import 'package:flutter_bloc_architecture/domain/entities/hand_entity.dart';
+import 'package:flutter_bloc_architecture/domain/useCase/get_cards_hand_use_case_interface.dart';
 
 class GetCardsHandUseCase extends GetCardsHandUseCaseInterface {
   CardsRepositoryInterface cardsRepository;

@@ -1,10 +1,10 @@
-import 'package:flutter_bloc_plus_freezed/data/services/cards/cards_service.dart';
-import 'package:flutter_bloc_plus_freezed/data/services/model/generate_deck_response.dart';
-import 'package:flutter_bloc_plus_freezed/data/services/model/get_cards_response.dart';
-import 'package:flutter_bloc_plus_freezed/domain/entities/card_entity.dart';
-import 'package:flutter_bloc_plus_freezed/domain/entities/deck_entity.dart';
-import 'package:flutter_bloc_plus_freezed/domain/entities/hand_entity.dart';
-import 'package:flutter_bloc_plus_freezed/data/repository/cards_repository_interface.dart';
+import 'package:flutter_bloc_architecture/data/services/cards/cards_service.dart';
+import 'package:flutter_bloc_architecture/data/services/model/generate_deck_response.dart';
+import 'package:flutter_bloc_architecture/data/services/model/get_cards_response.dart';
+import 'package:flutter_bloc_architecture/domain/entities/card_entity.dart';
+import 'package:flutter_bloc_architecture/domain/entities/deck_entity.dart';
+import 'package:flutter_bloc_architecture/domain/entities/hand_entity.dart';
+import 'package:flutter_bloc_architecture/data/repository/cards_repository_interface.dart';
 
 class CardsRepository implements CardsRepositoryInterface {
   CardsService cardsService;

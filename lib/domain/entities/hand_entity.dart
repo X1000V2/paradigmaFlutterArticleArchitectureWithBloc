@@ -1,4 +1,4 @@
-import 'package:flutter_bloc_plus_freezed/domain/entities/card_entity.dart';
+import 'package:flutter_bloc_architecture/domain/entities/card_entity.dart';
 
 class HandEntity {
   List<CardEntity> cardList;

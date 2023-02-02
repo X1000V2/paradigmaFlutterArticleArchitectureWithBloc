@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="paradigma.bloc.freezed.flutter_bloc_plus_freezed">
+    package="paradigma.bloc.freezed.flutter_bloc_architecture">
    <application
-        android:label="flutter_bloc_plus_freezed"
+        android:label="flutter_bloc_architecture"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
